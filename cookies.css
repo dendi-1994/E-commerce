@@ -1,0 +1,61 @@
+#cookie-consent {
+  background-color: #222;
+  color: white;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  z-index: 1;
+  max-width: 500px;
+}
+#cookie-consent button {
+  padding: 8px;
+  margin-top: 1em;
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#cookie-consent-select {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+#cookie-consent-select span {
+  display: block;
+  margin-left: auto;
+  width: max-content;
+  cursor: pointer;
+  padding: 10px 0px;
+  font-size: 22px;
+}
+#cookie-consent-select table {
+  width: 100%;
+}
+#cookie-consent-select table tr {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cookie-consent-select button {
+  padding: 10px 16px;
+  margin-top: 1em;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=cookies.css.map */

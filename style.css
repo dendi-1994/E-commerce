@@ -1,0 +1,1038 @@
+:root {
+  --gray-border: 1px solid lightgray;
+  --default-transition: 0.2s ease;
+}
+@font-face {
+  font-family: "BrandonGrotesque-Black";
+  src: url("../fonts/BrandonGrotesque-Black.ttf");
+}
+@font-face {
+  font-family: "BrandonGrotesque-Regular";
+  src: url("../fonts/BrandonGrotesque-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BrandonGrotesque-Black";
+}
+.wrapper {
+  width: 100%;
+  min-height: auto;
+}
+.wrapper header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+.wrapper header .upper-nav {
+  width: 100%;
+  padding: 8px 0;
+  background: #e12c2c;
+}
+.wrapper header .upper-nav p {
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+.wrapper header .navigation {
+  background: #fff;
+  padding: 10px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: var(--default-transition);
+}
+.wrapper header .navigation nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  transition: var(--default-transition);
+}
+.wrapper header .navigation nav .logo a {
+  text-decoration: none;
+  color: #000;
+}
+.wrapper header .navigation nav .logo a h1 {
+  padding: 10px 0;
+  position: relative;
+}
+.wrapper header .navigation nav .logo a h1:before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #e12c2c;
+  transition: 0.2s ease;
+  transform: scaleX(0);
+}
+.wrapper header .navigation nav .logo a h1:hover:before {
+  transform: scaleX(1);
+}
+.wrapper header .navigation nav .menu ul {
+  list-style-type: none;
+}
+.wrapper header .navigation nav .menu ul li {
+  position: relative;
+  display: inline-block;
+}
+.wrapper header .navigation nav .menu ul li:before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #e12c2c;
+  transition: 0.2s ease;
+  transform: scaleX(0);
+}
+.wrapper header .navigation nav .menu ul li:hover:before {
+  transform: scaleX(0.6);
+}
+.wrapper header .navigation nav .menu ul li a {
+  display: inline-block;
+  padding: 10px 26px;
+  margin: 0 16px;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+.wrapper header .navigation nav .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper header .navigation nav .buttons div {
+  margin: 0 0 0 30px;
+}
+.wrapper header .navigation nav .buttons .signin a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+.wrapper header .navigation nav .buttons .card a {
+  padding: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s ease;
+}
+.wrapper header .navigation nav .buttons .card a:hover {
+  background: #e12c2c;
+  color: #fff;
+}
+.wrapper header .navigation nav .buttons .card a:hover .fa {
+  transform: scale(1.3);
+}
+.wrapper header .navigation nav .buttons .card .fa {
+  font-size: 26px;
+  transition: 0.2s ease;
+}
+.wrapper main .sect1 {
+  width: 100%;
+  min-height: 80vh;
+  background: radial-gradient(circle, #222, black 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper main .sect1 .heading h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 70px;
+  transition: var(--default-transition);
+}
+.wrapper main .sect1 .heading h3 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  letter-spacing: 2px;
+  font-family: "BrandonGrotesque-Regular";
+  transition: var(--default-transition);
+}
+.wrapper main .sect2 {
+  padding: 50px 100px;
+}
+.wrapper main .sect2 .heading h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.wrapper main .sect2 .heading p {
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.wrapper main .sect2 .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper main .sect2 .content .text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 60%;
+  padding: 50px 50px 50px 0;
+}
+.wrapper main .sect2 .content .text p {
+  font-size: 26px;
+  font-family: "BrandonGrotesque-Regular";
+  font-weight: 100;
+}
+.wrapper main .sect2 .content .text p {
+  text-align: left;
+}
+.wrapper main .sect2 .content .text a {
+  display: inline-block;
+  padding: 16px 26px;
+  font-size: 1rem;
+  font-family: "BrandonGrotesque-Regular";
+  background: #e12c2c;
+  color: #fff;
+  margin-top: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: 0.2s;
+  border: 2px solid #e12c2c;
+}
+.wrapper main .sect2 .content .text a:hover {
+  background: #fff;
+  color: #e12c2c;
+}
+.wrapper main .sect2 .content .image img {
+  width: 500px;
+  height: 400px;
+}
+.wrapper main .sect3 {
+  padding: 100px 200px;
+  background: #f7f7f7;
+}
+.wrapper main .sect3 .heading {
+  margin-bottom: 50px;
+}
+.wrapper main .sect3 .heading h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+.wrapper main .sect3 .heading p {
+  text-align: center;
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.wrapper main .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.wrapper main .products .product {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.wrapper main .products .product:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.wrapper main .products .product .image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrapper main .products .product .image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+.wrapper main .products .product .content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper main .products .product .content .title {
+  margin-top: 1em;
+}
+.wrapper main .products .product .content .title p {
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 22px;
+}
+.wrapper main .products .product .content .desc p {
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 16px;
+}
+.wrapper main .products .product .content .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.wrapper main .products .product .content .price a {
+  position: relative;
+  text-decoration: none;
+  color: #e12c2c;
+  padding: 10px 8px;
+}
+.wrapper main .products .product .content .price a:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: #e12c2c;
+  width: 100%;
+  height: 2px;
+  transition: 0.2s ease;
+  transform: scaleX(0);
+}
+.wrapper main .products .product .content .price a:hover:before {
+  transform: scaleX(1);
+}
+.wrapper main .products .product .content .price p {
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 18px;
+  font-weight: 900;
+}
+.wrapper main .buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.wrapper main .buttons a {
+  display: inline-block;
+  padding: 16px 26px;
+  font-size: 1rem;
+  font-family: "BrandonGrotesque-Regular";
+  background: #e12c2c;
+  color: #fff;
+  margin-top: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 2px solid #e12c2c;
+  transition: 0.2s;
+}
+.wrapper main .buttons a:hover {
+  background: #fff;
+  color: #e12c2c;
+}
+.wrapper main .signin-wrapper {
+  position: relative;
+  display: block;
+  padding: 50px 100px;
+  margin: auto;
+  margin-top: 100px;
+}
+.wrapper main .signin-wrapper .content {
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  padding: 50px 0;
+}
+.wrapper main .signin-wrapper .content .or {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper main .signin-wrapper .content .or p {
+  text-align: center;
+  margin: 20px 0;
+}
+.wrapper main .signin-wrapper .content .or:before {
+  top: 0;
+  content: "\a0";
+  height: 15%;
+  border-right: 1px dashed;
+}
+.wrapper main .signin-wrapper .content .or:after {
+  top: 0;
+  content: "\a0";
+  height: 85%;
+  border-right: 1px dashed;
+}
+.wrapper main .signin-wrapper .content .login,
+.wrapper main .signin-wrapper .content .register {
+  padding: 20px;
+}
+.wrapper main .signin-wrapper .content .login {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.wrapper main .signin-wrapper .content .login .content,
+.wrapper main .signin-wrapper .content .register .content {
+  padding: 0;
+  display: block;
+}
+.wrapper main .signin-wrapper .content .login h3,
+.wrapper main .signin-wrapper .content .register h3 {
+  display: block;
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.wrapper main .signin-wrapper .content .login .form form input,
+.wrapper main .signin-wrapper .content .register .form form input {
+  display: block;
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 16px 20px;
+  width: 400px;
+  border: var(--gray-border);
+  border-radius: 5px;
+  outline: none;
+  transition: 0.2s;
+}
+.wrapper main .signin-wrapper .content .login .form form input[type="submit"],
+.wrapper
+  main
+  .signin-wrapper
+  .content
+  .register
+  .form
+  form
+  input[type="submit"] {
+  background: #e12c2c;
+  color: #fff;
+  border: 1px solid #e12c2c;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.wrapper
+  main
+  .signin-wrapper
+  .content
+  .login
+  .form
+  form
+  input[type="submit"]:hover,
+.wrapper
+  main
+  .signin-wrapper
+  .content
+  .register
+  .form
+  form
+  input[type="submit"]:hover {
+  border: 1px solid #e12c2c;
+  background: #fff;
+  color: #e12c2c;
+}
+.wrapper main .signin-wrapper .content .login .form form input:hover,
+.wrapper main .signin-wrapper .content .register .form form input:hover {
+  border: 1px solid #000;
+}
+.wrapper main .all-products-wrapper {
+  padding: 50px 0;
+  margin-top: 100px;
+}
+.wrapper main .all-products-wrapper .products {
+  padding: 100px 200px;
+}
+.wrapper main .all-products-wrapper .heading h3 {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.wrapper main .all-products-wrapper .wine,
+.wrapper main .all-products-wrapper .beer,
+.wrapper main .all-products-wrapper .liquor {
+  padding: 50px 70px;
+}
+.wrapper main .all-products-wrapper .beer {
+  background: #e5e7e8;
+}
+.wrapper main .all-products-wrapper .wine .heading h3,
+.wrapper main .all-products-wrapper .beer .heading h3,
+.wrapper main .all-products-wrapper .liquor .heading h3 {
+  position: relative;
+  font-size: 2rem;
+  text-align: left;
+  margin: 30px 0;
+  font-family: "BrandonGrotesque-Regular";
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+.wrapper main .all-products-wrapper .wine .heading h3:before,
+.wrapper main .all-products-wrapper .beer .heading h3:before,
+.wrapper main .all-products-wrapper .liquor .heading h3:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background: #e12c2c;
+  transition: 0.2s ease;
+  transform: scaleX(0);
+}
+.wrapper main .all-products-wrapper .wine .heading h3:hover:before,
+.wrapper main .all-products-wrapper .beer .heading h3:hover:before,
+.wrapper main .all-products-wrapper .liquor .heading h3:hover:before {
+  transform: scaleX(1);
+}
+.wrapper main .all-products-wrapper .wine .products,
+.wrapper main .all-products-wrapper .beer .products,
+.wrapper main .all-products-wrapper .liquor .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+.wrapper main .cart-wrapper {
+  padding: 100px 300px;
+  margin-top: 100px;
+}
+.wrapper main .cart-wrapper .cart {
+  padding: 10px;
+}
+.wrapper main .cart-wrapper .cart .heading {
+  margin-bottom: 50px;
+}
+.wrapper main .cart-wrapper .cart .heading h3 {
+  text-align: center;
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+.wrapper main .cart-wrapper .cart .products {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+}
+.wrapper main .cart-wrapper .cart .products .product {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.wrapper main .cart-wrapper .cart .products .product .head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 16px;
+  position: absolute;
+  width: 100%;
+}
+.wrapper main .cart-wrapper .cart .products .product .head .heading {
+  padding: 10px 16px;
+  margin-bottom: 0;
+}
+.wrapper main .cart-wrapper .cart .products .product .head .heading h3 {
+  font-family: "BrandonGrotesque-Regular";
+  font-weight: 100;
+}
+.wrapper main .cart-wrapper .cart .products .product .head .close {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+}
+.wrapper main .cart-wrapper .cart .products .product .content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.wrapper main .cart-wrapper .cart .products .product .content .image {
+  width: 100%;
+  border-right: var(--gray-border);
+  padding: 10px;
+}
+.wrapper main .cart-wrapper .cart .products .product .content .image img {
+  width: 100%;
+}
+.wrapper main .cart-wrapper .cart .products .product .content .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 26px;
+  padding-right: 5em;
+}
+.wrapper main .cart-wrapper .cart .products .product .content .info .desc p {
+  font-size: 22px;
+  font-family: "BrandonGrotesque-Regular";
+}
+.wrapper main .cart-wrapper .cart .products .product .content .info .price {
+  margin-top: 20px;
+}
+.wrapper main .cart-wrapper .cart .products .product .content .info .price p {
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 24px;
+  font-weight: 900;
+}
+.wrapper main .cart-wrapper .total p {
+  text-align: right;
+  padding: 30px 10px 0 0;
+}
+.wrapper main .cart-wrapper .total p a {
+  text-decoration: none;
+  padding: 16px 26px;
+  display: inline-block;
+  background: #e12c2c;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: "BrandonGrotesque-Regular";
+}
+
+footer .content {
+  background: #e5e7e8;
+  padding: 50px 350px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
+footer .content .about h3,
+footer .content .menu h3 {
+  font-family: "BrandonGrotesque-Regular";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+footer .content .about p {
+  font-size: 18px;
+  font-family: "BrandonGrotesque-Regular";
+  letter-spacing: 2px;
+  width: 80%;
+}
+footer .content .menu ul {
+  list-style-type: none;
+}
+footer .content .menu ul li a:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #e12c2c;
+  transition: 0.2s ease;
+  transform: scaleX(0);
+}
+footer .content .menu ul li a:hover:before {
+  transform: scaleX(1.2);
+}
+footer .content .menu ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-family: "BrandonGrotesque-Regular";
+  padding: 10px 0px;
+  font-size: 20px;
+}
+footer .footer-bottom {
+  display: block;
+  padding: 50px;
+  background: #222;
+}
+footer .footer-bottom p {
+  text-align: center;
+  color: #fff;
+  font-family: "BrandonGrotesque-Regular";
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1280px) {
+  .wrapper main .cart-wrapper {
+    padding: 100px 200px;
+  }
+}
+@media (max-width: 1080px) {
+  .wrapper header .navigation {
+    padding: 0;
+  }
+  .wrapper header .navigation nav {
+    padding: 0 20px;
+  }
+  .wrapper header .navigation nav .menu ul li a {
+    padding: 10px 16px;
+    margin: 0 8px;
+  }
+  .wrapper main .sect1 .heading h1,
+  .wrapper main .all-products-wrapper .heading h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
+  .wrapper main .sect1 .heading h3 {
+    font-size: 1rem;
+  }
+  .wrapper main .sect2 .heading h1 {
+    text-align: center;
+  }
+  .wrapper main .sect2 .heading p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .wrapper main .sect2 .content {
+    padding: 50px 0;
+    align-items: center;
+  }
+  .wrapper main .sect2 .content .text {
+    padding: 0;
+  }
+  .wrapper main .sect2 .content .text p {
+    font-size: 20px;
+  }
+  .wrapper main .sect2 .content .text a {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+  .wrapper main .all-products-wrapper .products,
+  .wrapper main .sect3 {
+    padding: 50px;
+  }
+  .wrapper main .sect3 .heading p {
+    font-size: 1.5rem;
+  }
+  .wrapper main .all-products-wrapper .products,
+  .wrapper main .sect3 .products {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .wrapper main .sect3 .buttons {
+    margin-top: 30px;
+  }
+  .wrapper main .sect3 .buttons a {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+  }
+  .wrapper main .cart-wrapper {
+    padding: 100px;
+  }
+  footer .content {
+    padding: 50px 100px;
+    grid-gap: 50px;
+  }
+  .wrapper main .signin-wrapper {
+    padding: 50px 75px;
+  }
+  .wrapper main .signin-wrapper .content {
+    width: 100%;
+  }
+  .wrapper main .signin-wrapper .content .login .form form input,
+  .wrapper main .signin-wrapper .content .register .form form input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 16px 0;
+  }
+  .wrapper main .signin-wrapper .content .login .form form input[type="submit"],
+  .wrapper
+    main
+    .signin-wrapper
+    .content
+    .register
+    .form
+    form
+    input[type="submit"] {
+    font-size: 1.2rem;
+  }
+  .wrapper main .cart-wrapper .cart .heading h3 {
+    font-size: 30px;
+  }
+  .wrapper main .cart-wrapper .cart .heading h3 {
+    font-size: 20px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .price {
+    margin-top: 16px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .price p {
+    font-size: 20px;
+  }
+  footer .content .about p {
+    width: 90%;
+  }
+  footer .footer-bottom {
+    padding: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .wrapper header .navigation nav .buttons .card .fa {
+    font-size: 1.5rem;
+  }
+  .wrapper main .sect1 .heading h1 {
+    line-height: 60px;
+  }
+  .wrapper main .sect2 {
+    padding: 50px;
+  }
+  .wrapper main .sect2 .heading h1,
+  .wrapper main .sect3 .heading h1 {
+    font-size: 3rem;
+  }
+  .wrapper main .sect2 .heading p,
+  .wrapper main .sect3 .heading p {
+    font-size: 1.2rem;
+  }
+  .wrapper main .sect2 .content {
+    flex-direction: column-reverse;
+  }
+  .wrapper main .sect2 .content .image img {
+    width: 450px;
+    height: auto;
+  }
+  .wrapper main .sect2 .content .text {
+    width: 90%;
+  }
+  .wrapper main .sect2 .content .text p:nth-child(2) {
+    text-align: center;
+  }
+  .wrapper main .sect3 .heading {
+    padding: 20px;
+  }
+  .wrapper main .sect3 {
+    padding: 50px;
+  }
+  .wrapper main .all-products-wrapper .products,
+  .wrapper main .sect3 .products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .wrapper main .signin-wrapper {
+    padding: 30px;
+  }
+  .wrapper main .signin-wrapper .content {
+    padding: 30px 0;
+    width: 100%;
+  }
+  .wrapper main .signin-wrapper .content .login .form,
+  .wrapper main .signin-wrapper .content .register .form {
+    width: 100%;
+  }
+  .wrapper main .signin-wrapper .content .login .form form input,
+  .wrapper main .signin-wrapper .content .register .form form input {
+    width: 100%;
+    padding: 10px 12px;
+  }
+  .wrapper main .cart-wrapper {
+    padding: 50px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .desc p {
+    font-size: 18px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .head .close {
+    font-size: 26px;
+  }
+  .wrapper main .cart-wrapper .total p a {
+    padding: 12px 18px;
+    font-size: 1.2rem;
+  }
+  footer .content {
+    padding: 50px;
+  }
+  footer .content .about p {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper header .navigation nav .menu ul li a {
+    padding: 8px 12px;
+    margin: 6px;
+  }
+  .wrapper header .navigation nav .buttons .card a {
+    padding: 8px 12px;
+  }
+  .wrapper header .navigation nav .buttons div {
+    margin: 0 0 0 20px;
+  }
+  .wrapper header .navigation nav .buttons .card .fa {
+    font-size: 1rem;
+  }
+  .wrapper main .sect2 .heading h1,
+  .wrapper main .sect3 .heading h1,
+  .wrapper main .all-products-wrapper .heading h3 {
+    font-size: 2.5rem;
+  }
+  .wrapper main .sect2 .heading p,
+  .wrapper main .sect3 .heading p {
+    font-size: 1rem;
+  }
+  .wrapper main .sect2 .content .image img {
+    width: 350px;
+    height: auto;
+  }
+  .wrapper main .sect2 .content .text p {
+    font-size: 18px;
+  }
+  .wrapper main .sect2 .content .text a,
+  .wrapper main .sect3 .buttons a {
+    padding: 10px 12px;
+  }
+  .wrapper main .sect3 .heading {
+    margin: 0;
+  }
+  .wrapper main .cart-wrapper {
+    padding: 30px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .desc p {
+    font-size: 16px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .price {
+    margin-top: 4px;
+  }
+  footer .footer-bottom p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper header .navigation nav .menu {
+    display: none;
+  }
+  .wrapper main .cart-wrapper .total p a {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+  .wrapper main .sect1 .heading h1,
+  .wrapper main .all-products-wrapper .heading h3 {
+    font-size: 2.5rem;
+  }
+  .wrapper main .sect1 .heading h3 {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+  }
+  .wrapper main .sect2 .heading p,
+  .wrapper main .sect3 .heading p {
+    font-size: 1.2rem;
+  }
+  .wrapper main .sect2,
+  .wrapper main .sect3 {
+    padding: 50px 30px;
+  }
+  .wrapper main .sect2 .content .text {
+    margin-top: 20px;
+  }
+  .wrapper main .sect2 .content .image img {
+    width: 100%;
+  }
+  .wrapper main .sect2 .content .text p {
+    text-align: center;
+  }
+  .wrapper main .sect2 .content .text a,
+  .wrapper main .sect3 .buttons a {
+    padding: 16px 20px;
+    font-size: 1rem;
+  }
+  .wrapper main .all-products-wrapper .products,
+  .wrapper main .sect3 .products {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  .wrapper main .all-products-wrapper {
+    padding: 50px 0;
+  }
+  .wrapper main .signin-wrapper .content {
+    grid-template-columns: 1fr;
+  }
+  .wrapper main .signin-wrapper .content .login h3,
+  .wrapper main .signin-wrapper .content .register h3 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .wrapper main .signin-wrapper .content .or {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .wrapper main .signin-wrapper .content .or:before,
+  .wrapper main .signin-wrapper .content .or:after {
+    border-top: 1px dashed;
+    border-right: none;
+    width: 42%;
+    height: 1px;
+    top: unset;
+  }
+  .wrapper main .cart-wrapper .cart .heading h3 {
+    font-size: 2.5rem;
+  }
+  .wrapper main .cart-wrapper {
+    padding: 20px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .head {
+    padding: 0;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .head .heading h3 {
+    font-size: 20px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content {
+    grid-template-columns: 1.5fr 2.5fr;
+  }
+  footer .content {
+    grid-template-columns: 1fr;
+  }
+  footer .content .menu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  footer .content .menu ul li {
+    display: inline-block;
+  }
+  footer .content .menu ul li a {
+    padding: 10px 16px;
+  }
+}
+@media (max-width: 414px) {
+  .wrapper main .sect1 {
+    min-height: 50vh;
+  }
+  .wrapper main .sect1 .heading h1,
+  .wrapper main .all-products-wrapper .heading h3 {
+    margin-top: 40px;
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .wrapper main .sect1 .heading h3 {
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+  .wrapper main .sect2,
+  .wrapper main .sect3 {
+    padding: 30px 20px;
+  }
+  .wrapper main .sect2 .content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper main .sect2 .content .image img {
+    width: 90%;
+  }
+  .wrapper main .sect3 .heading {
+    margin: 0;
+  }
+  .wrapper main .signin-wrapper {
+    padding: 30px 20px;
+  }
+  .wrapper main .signin-wrapper .content {
+    padding: 0;
+  }
+  .wrapper main .signin-wrapper .content .login,
+  .wrapper main .signin-wrapper .content .register {
+    padding-bottom: 0;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info {
+    padding: 0 10px;
+  }
+  .wrapper main .cart-wrapper .cart .products .product .content .info .desc p {
+    font-size: 14px;
+  }
+  footer .content {
+    padding: 30px 20px;
+  }
+}
